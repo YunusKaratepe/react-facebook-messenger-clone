@@ -1,0 +1,26 @@
+.messageDiv {
+    width: fit-content;
+    margin: 10px;
+}
+
+.userMessageDiv {
+    width: fit-content;
+    margin: 10px;
+    margin-left: auto;
+    color: white;
+    text-align: left !important;
+}
+
+.card {
+    text-align: left;
+    background-color: lightgray !important;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.userCard {
+    text-align: left;
+    background-color: lightseagreen !important;
+    padding-left: 24px;
+    padding-right: 24px;
+}
