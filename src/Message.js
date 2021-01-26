@@ -12,7 +12,7 @@ function Message({message, username}) {
                             {message.username}
                         </Typography>
                         <Typography>
-                            {message.text}
+                            {message.message}
                         </Typography>
                     </CardContent>
                 </Card>
@@ -28,7 +28,7 @@ function Message({message, username}) {
                         {message.username}
                     </Typography>
                     <Typography>
-                        {message.text}
+                        {message.message}
                     </Typography>
                 </CardContent>
             </Card>
