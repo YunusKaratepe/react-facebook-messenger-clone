@@ -1,6 +1,8 @@
 .messageDiv {
     width: fit-content;
     margin: 10px;
+    max-width: 36%;
+    word-wrap: break-word;
 }
 
 .userMessageDiv {
@@ -9,6 +11,8 @@
     margin-left: auto;
     color: white;
     text-align: left !important;
+    max-width: 36%;
+    word-wrap: break-word;
 }
 
 .card {

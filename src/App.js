@@ -1,10 +1,12 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
-import {Button, Input} from '@material-ui/core';
+import {Input, IconButton} from '@material-ui/core';
 import Message from './Message';
 import db from './firebase';
 import firebase from 'firebase';
-
+import FlipMove from 'react-flip-move';
+import logo from './messenger-logo.png';
+import SendRoundedIcon from '@material-ui/icons/SendRounded';
 
 function App() {
 
@@ -54,25 +56,30 @@ function App() {
 
   return (
     <div className="App">
-      <h1>WELCOME {username} 💯</h1>
+      
+      <img className="MessengerLogo" src={logo} alt={"Logo not found!"}/>
+      <h2>WELCOME {username} 💯</h2>
 
-      <form>
+      <form className="app__form">
         <Input value={input} placeholder="Message..." inputProps={{ 'aria-label': 'description' }} 
           onChange={event => setInput(event.target.value)} />
 
-        <Button style={{marginLeft: "10px"}} disabled={!input} variant="contained" color="primary" 
-          type="submit" onClick={sendMessage}>Send</Button> 
+        <IconButton  style={{marginLeft: "10px"}} disabled={!input} 
+          variant="contained" color="primary" type="submit" onClick={sendMessage}>
+          <SendRoundedIcon/>   
+        </IconButton> 
       </form>
 
       {/* Comment Line */}
       
-      {
-        messages.map(({id, message}) => (
-          <Message key={id} username={username} message={message}/>
-        ))
-      }
+      <FlipMove>
+        {
+          messages.map(({id, message}) => (
+            <Message key={id} username={username} message={message}/>
+          ))
+        }
+      </FlipMove>
       
-
     </div>
   );
 }
