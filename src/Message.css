@@ -18,13 +18,13 @@
 .card {
     text-align: left;
     background-color: lightgray !important;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .userCard {
     text-align: left;
     background-color: lightseagreen !important;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
