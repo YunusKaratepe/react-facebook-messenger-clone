@@ -61,13 +61,13 @@ function App() {
       <h2>WELCOME {username} 💯</h2>
 
       <form className="app__form">
-        <Input value={input} placeholder="Message..." inputProps={{ 'aria-label': 'description' }} 
-          onChange={event => setInput(event.target.value)} />
+          <Input value={input} placeholder="Message..." inputProps={{ 'aria-label': 'description' }} 
+            onChange={event => setInput(event.target.value)} />
 
-        <IconButton  style={{marginLeft: "10px"}} disabled={!input} 
-          variant="contained" color="primary" type="submit" onClick={sendMessage}>
-          <SendRoundedIcon/>   
-        </IconButton> 
+          <IconButton  style={{marginLeft: "10px"}} disabled={!input} 
+            variant="contained" color="primary" type="submit" onClick={sendMessage}>
+            <SendRoundedIcon/>   
+          </IconButton>
       </form>
 
       {/* Comment Line */}
